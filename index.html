@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SAN Coffee & Barbershop</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/logo-san.png" />
+</head>
+<body>
+
+  <!-- INFO BAR -->
+  <div class="info-bar">
+    <span>📍 Jl. SAN No. 1, Jakarta</span>
+    <span>🕐 Buka 08.00 – 22.00</span>
+    <span>📞 +62 812 3456 7890</span>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#"><img src="assets/logo-san.png" alt="SAN Logo" class="nav-logo" /></a>
+    <ul class="nav-links">
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#barbershop">Layanan</a></li>
+      <li><a href="#booking">Booking</a></li>
+    </ul>
+    <a href="#booking" class="btn-primary">Buat Janji</a>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="beranda">
+    <div class="hero-content">
+      <img src="assets/logo-san.png" alt="SAN Logo" class="hero-logo" />
+      <div class="hero-badges">
+        <span class="badge">COFFEE SHOP</span>
+        <span class="badge">BARBERSHOP</span>
+      </div>
+      <h1>SAN</h1>
+      <p>Tempat ngopi santai sambil tampil keren. Kopi terbaik dan grooming profesional dalam satu tempat.</p>
+      <div class="hero-btns">
+        <a href="#menu" class="btn-primary">Lihat Menu</a>
+        <a href="#booking" class="btn-outline">Booking Sekarang</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAYANAN -->
+  <section class="section" id="layanan">
+    <h2 class="section-title">APA YANG KAMI TAWARKAN</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Dua layanan premium dalam satu lokasi yang nyaman</p>
+    <div class="grid-2">
+      <div class="service-card">
+        <div class="service-icon">☕</div>
+        <h3>SAN Coffee</h3>
+        <p>Kopi specialty pilihan dengan berbagai metode seduh. Dari espresso hingga manual brew, semua ada untuk menemani harimu.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✂️</div>
+        <h3>SAN Barbershop</h3>
+        <p>Barbershop profesional dengan barberman berpengalaman. Potong rambut, cukur jenggot, dan perawatan pria terbaik.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="section alt-bg" id="menu">
+    <h2 class="section-title">MENU PILIHAN</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Kopi dan makanan terbaik untuk menemanimu</p>
+    <div class="tab-bar">
+      <button class="tab active" onclick="showTab('coffee', this)">Kopi</button>
+      <button class="tab" onclick="showTab('nonkopi', this)">Non-Kopi</button>
+      <button class="tab" onclick="showTab('makanan', this)">Makanan</button>
+    </div>
+    <div id="tab-coffee" class="menu-grid">
+      <div class="menu-card"><div class="emoji">☕</div><h4>Espresso</h4><p>Single origin, bright & bold</p><span>Rp 25.000</span></div>
+      <div class="menu-card"><div class="emoji">🥛</div><h4>SAN Latte</h4><p>Espresso + steamed milk pilihan</p><span>Rp 32.000</span></div>
+      <div class="menu-card"><div class="emoji">🧊</div><h4>Cold Brew</h4><p>Diseduh 18 jam, smooth & rich</p><span>Rp 35.000</span></div>
+      <div class="menu-card"><div class="emoji">🍵</div><h4>Pour Over</h4><p>Manual brew, V60 / Chemex</p><span>Rp 38.000</span></div>
+    </div>
+    <div id="tab-nonkopi" class="menu-grid hidden">
+      <div class="menu-card"><div class="emoji">🍵</div><h4>Matcha Latte</h4><p>Matcha Jepang premium</p><span>Rp 32.000</span></div>
+      <div class="menu-card"><div class="emoji">🍫</div><h4>Coklat SAN</h4><p>Dark chocolate creamy blend</p><span>Rp 30.000</span></div>
+      <div class="menu-card"><div class="emoji">🍹</div><h4>Soda Buah</h4><p>Lemon, lychee, atau passion fruit</p><span>Rp 28.000</span></div>
+      <div class="menu-card"><div class="emoji">🧃</div><h4>Jus Segar</h4><p>Alpukat, mangga, atau jeruk</p><span>Rp 25.000</span></div>
+    </div>
+    <div id="tab-makanan" class="menu-grid hidden">
+      <div class="menu-card"><div class="emoji">🥐</div><h4>Croissant</h4><p>Butter croissant renyah</p><span>Rp 22.000</span></div>
+      <div class="menu-card"><div class="emoji">🍞</div><h4>Toast Alpukat</h4><p>Roti panggang + alpukat + telur</p><span>Rp 35.000</span></div>
+      <div class="menu-card"><div class="emoji">🧇</div><h4>Waffle SAN</h4><p>Waffle with cream & berry</p><span>Rp 40.000</span></div>
+      <div class="menu-card"><div class="emoji">🥗</div><h4>Salad Bowl</h4><p>Sayur segar + dressing pilihan</p><span>Rp 38.000</span></div>
+    </div>
+  </section>
+
+  <!-- BARBERSHOP -->
+  <section class="section" id="barbershop">
+    <h2 class="section-title">LAYANAN BARBERSHOP</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Pilihan grooming terbaik untuk tampil percaya diri</p>
+    <div class="menu-grid" style="max-width:700px; margin: 0 auto 3rem;">
+      <div class="menu-card"><div class="emoji">✂️</div><h4>Potong Rambut</h4><p>Klasik, fade, undercut, dll</p><span>Rp 50.000</span></div>
+      <div class="menu-card"><div class="emoji">🪒</div><h4>Cukur Jenggot</h4><p>Shave & trim profesional</p><span>Rp 30.000</span></div>
+      <div class="menu-card"><div class="emoji">💆</div><h4>Hair Wash</h4><p>Keramas + pijat kepala</p><span>Rp 25.000</span></div>
+      <div class="menu-card"><div class="emoji">🌟</div><h4>Paket Lengkap</h4><p>Potong + cukur + keramas</p><span>Rp 90.000</span></div>
+    </div>
+    <h3 class="section-title" style="font-size:15px; margin-bottom:0.5rem;">TEAM KAMI</h3>
+    <div class="divider"></div>
+    <div class="barber-grid">
+      <div class="barber-card"><div class="avatar">💈</div><h4>Rizky</h4><p>Senior Barber</p><span>★★★★★</span></div>
+      <div class="barber-card"><div class="avatar">✂️</div><h4>Dimas</h4><p>Fade Specialist</p><span>★★★★★</span></div>
+      <div class="barber-card"><div class="avatar">🪒</div><h4>Fajar</h4><p>Shave Expert</p><span>★★★★☆</span></div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="section alt-bg" id="booking">
+    <h2 class="section-title">BUAT JANJI</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Booking barbershop & reservasi meja dengan mudah</p>
+    <div class="booking-form">
+      <div class="form-group">
+        <label>Nama Lengkap</label>
+        <input type="text" placeholder="Masukkan nama kamu" />
+      </div>
+      <div class="form-group">
+        <label>Nomor WhatsApp</label>
+        <input type="text" placeholder="+62 812 ..." />
+      </div>
+      <div class="form-group">
+        <label>Layanan</label>
+        <select>
+          <option>Potong Rambut</option>
+          <option>Cukur Jenggot</option>
+          <option>Paket Lengkap</option>
+          <option>Reservasi Meja Kopi</option>
+        </select>
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Tanggal</label>
+          <input type="date" />
+        </div>
+        <div class="form-group">
+          <label>Jam</label>
+          <select>
+            <option>08:00</option><option>09:00</option><option>10:00</option>
+            <option>11:00</option><option>12:00</option><option>13:00</option>
+            <option>14:00</option><option>15:00</option><option>16:00</option>
+            <option>17:00</option><option>18:00</option><option>19:00</option>
+            <option>20:00</option><option>21:00</option>
+          </select>
+        </div>
+      </div>
+      <button class="book-btn" onclick="handleBooking()">BOOKING SEKARANG</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img src="assets/logo-san.png" alt="SAN Logo" class="footer-logo" />
+    <div class="socials">
+      <a href="#">📸 Instagram</a>
+      <a href="#">🎵 TikTok</a>
+      <a href="#">💬 WhatsApp</a>
+    </div>
+    <p>Jl. SAN No. 1, Jakarta Pusat<br/>Buka setiap hari 08.00 – 22.00</p>
+    <p class="copyright">© 2026 SAN Coffee & Barbershop. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
