@@ -154,7 +154,21 @@
           </select>
         </div>
       </div>
-      <a id="wa-btn" class="book-btn" style="display:block; text-align:center; text-decoration:none;" onclick="handleBooking(event)" href="#">BOOKING SEKARANG</a>
+      <a id="wa-btn" href="#" class="book-btn" 
+   style="display:block; text-align:center; text-decoration:none;"
+   onclick="
+     var nama = document.querySelector('input[placeholder=\'Masukkan nama kamu\']').value;
+     var wa = document.querySelector('input[placeholder=\'+62 812 ...\']').value;
+     var layanan = document.querySelectorAll('select')[0].value;
+     var tanggal = document.querySelector('input[type=date]').value;
+     var jam = document.querySelectorAll('select')[1].value;
+     if(!nama||!wa){ alert('Isi nama dan WhatsApp dulu!'); return false; }
+     var pesan = 'Halo SAN! Saya ingin booking\n\nNama: '+nama+'\nWA: '+wa+'\nLayanan: '+layanan+'\nTanggal: '+tanggal+'\nJam: '+jam;
+     window.location.href = 'https://wa.me/6281188881125?text='+encodeURIComponent(pesan);
+     return false;
+   ">
+  BOOKING SEKARANG
+</a>
     </div>
   </section>
 
