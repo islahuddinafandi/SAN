@@ -12,7 +12,8 @@ function toggleMenu() {
 }
 
 // Booking → langsung ke WhatsApp
-function handleBooking() {
+function handleBooking(e) {
+  e.preventDefault();
   const nama = document.querySelector('input[placeholder="Masukkan nama kamu"]').value;
   const wa = document.querySelector('input[placeholder="+62 812 ..."]').value;
   const layanan = document.querySelectorAll('select')[0].value;
@@ -24,8 +25,7 @@ function handleBooking() {
     return;
   }
 
-  // Ganti dengan nomor WA toko kamu
-  const nomorToko = '6281234567890';
+  const nomorToko = '6281188881125'; // ganti nomor WA toko
 
   const pesan =
     `Halo SAN! Saya ingin booking 🙏\n\n` +
@@ -37,7 +37,7 @@ function handleBooking() {
     `Mohon konfirmasinya, terima kasih!`;
 
   const url = `https://wa.me/${nomorToko}?text=${encodeURIComponent(pesan)}`;
-  window.open(url, '_blank');
+  window.location.href = url; // ← pakai ini, bukan window.open
 }
 
 // Smooth scroll
