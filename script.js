@@ -21,7 +21,14 @@ function handleBooking() {
     return;
   }
 
-  var pesan = 'Halo SAN! Saya ingin booking\n\nNama: ' + nama + '\nWA: ' + wa + '\nLayanan: ' + layanan + '\nTanggal: ' + tanggal + '\nJam: ' + jam + '\n\nMohon konfirmasinya, terima kasih!';
+  var pesan = 'Halo SAN! Saya ingin booking\n\n'
+    + 'Nama: ' + nama + '\n'
+    + 'WA: ' + wa + '\n'
+    + 'Layanan: ' + layanan + '\n'
+    + 'Tanggal: ' + tanggal + '\n'
+    + 'Jam: ' + jam + '\n\n'
+    + 'Mohon konfirmasinya, terima kasih!';
+
   window.location.href = 'https://wa.me/6281188881125?text=' + encodeURIComponent(pesan);
 }
 
@@ -31,4 +38,4 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     var target = document.querySelector(a.getAttribute('href'));
     if (target) target.scrollIntoView({ behavior: 'smooth' });
   });
-})
+});
