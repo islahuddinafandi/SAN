@@ -31,4 +31,4 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     var target = document.querySelector(a.getAttribute('href'));
     if (target) target.scrollIntoView({ behavior: 'smooth' });
   });
-});
+})
