@@ -134,4 +134,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; color: #1a1a1a; }
   .hero h1 { font-size: 36px; }
   .info-bar { flex-direction: column; gap: 6px; text-align: center; }
   .form-grid { grid-template-columns: 1fr; }
+
+#barber-services {
+  display: grid !important;
 }
